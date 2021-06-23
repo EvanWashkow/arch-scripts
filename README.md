@@ -27,7 +27,7 @@ Installation scripts for Arch Linux
         * Change Keymap (`sudo localectl set-keymap dvorak`)
     3. Clone this repo to the current user's home directory
     4. Setup the User (`User/SetupUser.sh`)
-    5. Install AUR Common Packages (`System/InstallSystemAUR.sh`)
+    5. Install AUR Common Packages (`System/InstallSystemAur.sh`)
     6. Install AUR Desktop Packages (`DesktopEnvironment`)
     7. Install needed Pacman Hooks (`Pacman/Hook`)
 2. Reboot
