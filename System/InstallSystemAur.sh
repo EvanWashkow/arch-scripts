@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# Install Pamac
+# Install YAY
 cd ~
-git clone https://aur.archlinux.org/pamac-aur.git
-cd pamac-aur
-makepkg -sic
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -sicr
 cd ..
-rm -rdf pamac-aur
+rm -rdf yay
 
 # Install AUR utilities
-pamac build etc-update
+yay -S etc-update
