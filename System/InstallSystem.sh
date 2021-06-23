@@ -12,6 +12,7 @@ sudo pacman -S --needed --asexplicit \
     cronie \
     dhcpcd \
     fwupd \
+    git \
     nano \
     networkmanager \
     ntfs-3g \
