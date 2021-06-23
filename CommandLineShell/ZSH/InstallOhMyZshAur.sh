@@ -4,7 +4,7 @@
 sudo rm /etc/skel/.zshrc
 
 # Install OhMyZSH
-pamac build oh-my-zsh-git
+yay -S oh-my-zsh-git
 
 # Set up default ZSH config for new users
 sudo nano /etc/default/useradd

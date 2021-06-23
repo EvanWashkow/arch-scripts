@@ -1,6 +1,4 @@
 #!/bin/sh
 
-pamac build phpstorm
-pamac build phpstorm-jre
-
-sudo pacman -D --asdeps phpstorm-jre
+yay -S phpstorm
+yay -S --asdeps phpstorm-jre
