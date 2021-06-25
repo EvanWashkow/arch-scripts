@@ -12,3 +12,4 @@ yay -S --asdeps $optionalPackages
 
 # Enable services
 sudo systemctl enable gdm
+sudo systemctl enable switcheroo-control

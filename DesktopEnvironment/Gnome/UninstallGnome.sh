@@ -8,3 +8,4 @@ yay -Rns $requiredPackages $optionalPackages
 
 # Disable services
 sudo systemctl disable gdm
+sudo systemctl disable switcheroo-control
