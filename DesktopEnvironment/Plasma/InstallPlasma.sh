@@ -6,11 +6,9 @@ source $(dirname $0)/../Common/InstallCommon.sh
 # Package variables
 source $(dirname $0)/PackageVariables.sh
 
-# Install packages from main repos
-sudo pacman -S $requiredPackages
-
-# Install dependencies from main repos
-sudo pacman -S --asdeps $optionalPackages
+# Install packages
+yay -S $requiredPackages
+yay -S --asdeps $optionalPackages
 
 # Enable services
 sudo systemctl enable sddm
