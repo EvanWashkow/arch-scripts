@@ -7,8 +7,8 @@ source $(dirname $0)/../Common/InstallCommon.sh
 source $(dirname $0)/PackageVariables.sh
 
 # Install packages
-sudo pacman -S $requiredPackages
-sudo pacman -S --asdeps $optionalPackages
+yay -S $requiredPackages
+yay -S --asdeps $optionalPackages
 
 # Enable services
 sudo systemctl enable gdm
