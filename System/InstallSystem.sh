@@ -5,19 +5,20 @@
 #
 
 # Install common packages
-sudo pacman -S \
+sudo pacman -S --needed --asexplicit \
     base \
     base-devel \
     bluez \
     cronie \
     dhcpcd \
     fwupd \
+    git \
     nano \
     networkmanager \
     ntfs-3g \
     pipewire
 
-sudo pacman -S \
+sudo pacman -S --asdeps \
     pipewire-alsa \
     pipewire-jack \
     pipewire-pulse

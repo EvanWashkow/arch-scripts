@@ -22,7 +22,9 @@ requiredPackages="\
     gnome-weather \
     gvfs \
     nautilus \
-    totem"
+    totem
+    chrome-gnome-shell \
+    switcheroo-control"
 
 optionalPackages="\
     gnome-control-center \
