@@ -6,6 +6,5 @@ sudo pacman -Rns --noconfirm \
     alsa-lib \
     alsa-topology-conf \
     alsa-ucm-conf \
-    $(pacman -Qe | grep "^lib")
     vim \
     zsh-syntax-highlighting
