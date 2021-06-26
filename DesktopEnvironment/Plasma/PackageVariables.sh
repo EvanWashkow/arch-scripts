@@ -6,8 +6,7 @@ requiredPackages="\
     plasma-meta \
     kdeconnect \
     plasma-wayland-session \
-    spectacle \
-    pamac-tray-icon-plasma"
+    spectacle"
 
 optionalPackages="\
     kde-gtk-config \
