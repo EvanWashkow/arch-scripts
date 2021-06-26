@@ -5,7 +5,7 @@
 #
 
 # Install common packages
-sudo pacman -S --needed --asexplicit \
+sudo pacman -S --needed \
     base \
     base-devel \
     bluez \
