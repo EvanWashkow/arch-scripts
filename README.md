@@ -36,8 +36,8 @@ Installation scripts for Arch Linux
         2. Rank Mirrors (`Pacman/MirrorRanking/RankMirrors.sh`)
     4. Setup the User (`User/SetupUser.sh`)
 4. Update system
-    3. Run `yay -Syu`
-    4. Run `sudo etc-update`, resolving conflicts
+    1. Run `yay -Syu`
+    2. Run `sudo etc-update`, resolving conflicts
 5. Modify Bootloader
     1. Replace udev with systemd
         1. `sudo nano /etc/mkinitcpio.conf`
