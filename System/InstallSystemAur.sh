@@ -8,5 +8,5 @@ makepkg -sicr
 cd ..
 rm -rdf yay
 
-# Install AUR utilities
-yay -S etc-update
+# Install utilities
+yay -S etc-update pamac-aur
