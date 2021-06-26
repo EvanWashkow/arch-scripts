@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -D --asdeps \
+sudo pacman -Rns --noconfirm \
     adobe-source-code-pro-fonts \
     alsa-card-profiles \
     alsa-lib \
