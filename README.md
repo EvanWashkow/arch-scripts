@@ -13,9 +13,12 @@ Installation scripts for Arch Linux
     5. Run Distribution-specific scripts (`Distribution`)
         * This will provide a baseline for the later scripts
     6. Install System (`System/InstallSystem.sh`)
-    7. [Install video acceleration drivers](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Installation)
-    8. [Install XOrg drivers](https://wiki.archlinux.org/index.php/xorg#Driver_installation)
-    9. Delete this repo from the `/root` directory
+    7. Install audio drivers. Choose one:
+        * `System/InstallPulseAudio.sh`
+        * `System/InstallPipewire.sh`
+    8. [Install video acceleration drivers](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Installation)
+    9. [Install XOrg drivers](https://wiki.archlinux.org/index.php/xorg#Driver_installation)
+    10. Delete this repo from the `/root` directory
 2. Reboot
 
 ### As User...
