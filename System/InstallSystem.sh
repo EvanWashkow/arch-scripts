@@ -15,13 +15,7 @@ sudo pacman -S --needed \
     git \
     nano \
     networkmanager \
-    ntfs-3g \
-    pipewire
-
-sudo pacman -S --asdeps \
-    pipewire-alsa \
-    pipewire-jack \
-    pipewire-pulse
+    ntfs-3g
 
 # https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Getting_the_dependencies_list_of_several_packages
 baseDependencies=$(pacman -Qi base | awk -F'[:<=>]' '/^Depends/ {print $2}')
