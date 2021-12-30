@@ -57,7 +57,7 @@ Installation scripts for Arch Linux
         * https://bbs.archlinux.org/viewtopic.php?id=169988
     2. If you experience problems with Nvidia...
         1. [Try loading the kernel module earlier](https://wiki.archlinux.org/title/NVIDIA#Early_loading).
-        2. [And add a Pacman hook](https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
+        2. [And add a Pacman hook to reapply this change on nvidia upgrade](https://wiki.archlinux.org/title/NVIDIA#pacman_hook).
     3. Save
     4. Run `sudo mkinitcpio -P`
 8. Reboot
