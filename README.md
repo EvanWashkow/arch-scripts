@@ -16,9 +16,9 @@ Installation scripts for Arch Linux
     7. Install audio drivers. Choose one:
         * `System/InstallPulseAudio.sh`
         * `System/InstallPipewire.sh`
-    8. [Install video acceleration drivers](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Installation)
-    9. [Install XOrg drivers](https://wiki.archlinux.org/index.php/xorg#Driver_installation)
-    10. Delete this repo from the `/root` directory
+    8. Install graphics drivers. (`Graphics`)
+        * `Graphics/InstallIntel.sh` - supports cards >= 2014
+    9. Delete this repo from the `/root` directory
 2. Reboot
 
 ### As User...
