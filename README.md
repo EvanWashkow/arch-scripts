@@ -54,6 +54,7 @@ Installation scripts for Arch Linux
 7. Install common packages and utilities
     1. Setup Command-line Shell (`CommandLineShell`)
     2. Install Desktop Environment (`DesktopEnvironment`)
+        * If using Wayland + Nvidia, [ensure xorg-xwayland is installed](https://wiki.archlinux.org/title/Wayland#XWayland).
     3. Rank package mirrors
         1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`)
         2. Rank Mirrors (`Pacman/MirrorRanking/RankMirrors.sh`)
