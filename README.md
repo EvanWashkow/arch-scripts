@@ -51,7 +51,9 @@ Installation scripts for Arch Linux
             2. https://bbs.archlinux.org/viewtopic.php?id=169988
         3. Run `sudo mkinitcpio -P`
     2. Set up silent boot
-        1. Add these boot parameters: https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters
+        1. Add boot parameters
+            * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
+            * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting) (if using an Nvidia graphics card)
         2. Change timeout to zero
         3. Rebuild bootloader
             1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
