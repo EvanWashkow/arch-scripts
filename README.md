@@ -49,11 +49,14 @@ Installation scripts for Arch Linux
         2. Replace "udev usr resume" with "systemd" in the HOOKS field. (Sources below):
             * https://wiki.archlinux.org/index.php/mkinitcpio#Common_hooks
             * https://bbs.archlinux.org/viewtopic.php?id=169988
-        3. Run `sudo mkinitcpio -P`
+        3. If you experience problems with Nvidia...
+            1. [Try loading the kernel module earlier](https://wiki.archlinux.org/title/NVIDIA#Early_loading).
+            2. [And add a Pacman hook](https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
+        4. Run `sudo mkinitcpio -P`
     2. Set up silent boot
         1. Add boot parameters
             * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
-            * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting) (if using an Nvidia graphics card)
+            * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
         2. Change timeout to zero
         3. Rebuild bootloader
             1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
