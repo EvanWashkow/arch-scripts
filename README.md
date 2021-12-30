@@ -33,25 +33,15 @@ Installation scripts for Arch Linux
     4. Install AUR Common Packages (`System/InstallSystemAur.sh`)
     5. Install needed Pacman Hooks (`Pacman/Hook`)
 2. Reboot
-3. Install common packages and utilities
-    1. Setup Command-line Shell (`CommandLineShell`)
-    2. Install Desktop Environment (`DesktopEnvironment`)
-    3. Rank package mirrors
-        1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`)
-        2. Rank Mirrors (`Pacman/MirrorRanking/RankMirrors.sh`)
-    4. Setup the User (`User/SetupUser.sh`)
-4. Update system
-    1. Run `yay -Syu`
-    2. Run `sudo etc-update`, resolving conflicts
-5. Modify Bootloader
+3. Modify Bootloader
     1. Add boot parameters
         * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
         * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
     2. Change timeout to zero
     3. Rebuild bootloader
         1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
-6. Reboot
-7. Edit `sudo nano /etc/mkinitcpio.conf`
+4. Reboot
+5. Edit `sudo nano /etc/mkinitcpio.conf`
     1. Replace "udev usr resume" with "systemd" in the HOOKS field. (Sources below):
         * https://wiki.archlinux.org/index.php/mkinitcpio#Common_hooks
         * https://bbs.archlinux.org/viewtopic.php?id=169988
@@ -60,7 +50,17 @@ Installation scripts for Arch Linux
         2. [And add a Pacman hook to reapply this change on nvidia upgrade](https://wiki.archlinux.org/title/NVIDIA#pacman_hook).
     3. Save
     4. Run `sudo mkinitcpio -P`
-8. Reboot
+6. Reboot
+7. Install common packages and utilities
+    1. Setup Command-line Shell (`CommandLineShell`)
+    2. Install Desktop Environment (`DesktopEnvironment`)
+    3. Rank package mirrors
+        1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`)
+        2. Rank Mirrors (`Pacman/MirrorRanking/RankMirrors.sh`)
+    4. Setup the User (`User/SetupUser.sh`)
+8. Update system
+    1. Run `yay -Syu`
+    2. Run `sudo etc-update`, resolving conflicts
 9. Install Applications
     1. (`Application`)
     2. Any others
