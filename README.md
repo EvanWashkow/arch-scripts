@@ -18,6 +18,7 @@ Installation scripts for Arch Linux
         * `Audio/InstallPipewire.sh`
     8. Install graphics drivers. (`Graphics`)
         * `Graphics/InstallIntel.sh` - supports cards >= 2014
+        * `Graphics/InstallNvidia.sh`
     9. Delete this repo from the `/root` directory
 2. Reboot
 
