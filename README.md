@@ -14,8 +14,8 @@ Installation scripts for Arch Linux
         * This will provide a baseline for the later scripts
     6. Install System (`System/InstallSystem.sh`)
     7. Install audio drivers. Choose one:
-        * `System/InstallPulseAudio.sh`
-        * `System/InstallPipewire.sh`
+        * `Audio/InstallPulseAudio.sh`
+        * `Audio/InstallPipewire.sh`
     8. Install graphics drivers. (`Graphics`)
         * `Graphics/InstallIntel.sh` - supports cards >= 2014
     9. Delete this repo from the `/root` directory
