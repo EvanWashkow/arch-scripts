@@ -19,6 +19,7 @@ Installation scripts for Arch Linux
     8. Install graphics drivers. (`Graphics`)
         * `Graphics/InstallIntel.sh` - supports cards >= 2014
         * `Graphics/InstallNvidia.sh`
+        * `Graphics/InstallNvidiaPrime.sh` - adds the official `prime-run` command
     9. Delete this repo from the `/root` directory
 2. Reboot
 
