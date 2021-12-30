@@ -44,26 +44,26 @@ Installation scripts for Arch Linux
     1. Run `yay -Syu`
     2. Run `sudo etc-update`, resolving conflicts
 5. Modify Bootloader
-    1. Replace udev with systemd
-        1. `sudo nano /etc/mkinitcpio.conf`
-        2. Replace "udev usr resume" with "systemd" in the HOOKS field. (Sources below):
-            * https://wiki.archlinux.org/index.php/mkinitcpio#Common_hooks
-            * https://bbs.archlinux.org/viewtopic.php?id=169988
-        3. If you experience problems with Nvidia...
-            1. [Try loading the kernel module earlier](https://wiki.archlinux.org/title/NVIDIA#Early_loading).
-            2. [And add a Pacman hook](https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
-        4. Run `sudo mkinitcpio -P`
-    2. Set up silent boot
-        1. Add boot parameters
-            * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
-            * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
-        2. Change timeout to zero
-        3. Rebuild bootloader
-            1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
+    1. Add boot parameters
+        * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
+        * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+    2. Change timeout to zero
+    3. Rebuild bootloader
+        1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
 6. Reboot
-7. Install Applications
+7. Edit `sudo nano /etc/mkinitcpio.conf`
+    1. Replace "udev usr resume" with "systemd" in the HOOKS field. (Sources below):
+        * https://wiki.archlinux.org/index.php/mkinitcpio#Common_hooks
+        * https://bbs.archlinux.org/viewtopic.php?id=169988
+    2. If you experience problems with Nvidia...
+        1. [Try loading the kernel module earlier](https://wiki.archlinux.org/title/NVIDIA#Early_loading).
+        2. [And add a Pacman hook](https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
+    3. Save
+    4. Run `sudo mkinitcpio -P`
+8. Reboot
+9. Install Applications
     1. (`Application`)
     2. Any others
-8. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`)
-9. Remove uninstalled package cache (Run `sudo pacman -Sc`)
-10. Reboot
+10. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`)
+11. Remove uninstalled package cache (Run `sudo pacman -Sc`)
+12. Reboot
