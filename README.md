@@ -61,13 +61,14 @@ Installation scripts for Arch Linux
     4. Setup the User (`User/SetupUser.sh`).
 8. Update system.
     1. `yay -Syu`
-    2. Run `sudo etc-update`, resolving conflicts.
+    2. `sudo etc-update`
+    3. Resolve conflicts.
 9. Reboot.
 10. Configure.
     * `nvidia-xconfig` (for Nvidia graphics cards)
 11. Install Applications.
-    1. (`Application`)
-    2. Any others.
+    * (`Application`)
+    * Any others.
 12. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
 13. Remove uninstalled package cache (Run `sudo pacman -Sc`).
 14. Reboot.
