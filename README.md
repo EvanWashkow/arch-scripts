@@ -63,9 +63,11 @@ Installation scripts for Arch Linux
     1. `yay -Syu`
     2. Run `sudo etc-update`, resolving conflicts.
 9. Reboot.
-10. Install Applications.
+10. Configure.
+    * `nvidia-xconfig` (for Nvidia graphics cards)
+11. Install Applications.
     1. (`Application`)
     2. Any others.
-11. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
-12. Remove uninstalled package cache (Run `sudo pacman -Sc`).
-13. Reboot.
+12. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
+13. Remove uninstalled package cache (Run `sudo pacman -Sc`).
+14. Reboot.
