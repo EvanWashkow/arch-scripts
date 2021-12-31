@@ -4,12 +4,12 @@ These installation scripts setup a new Arch Linux install.
 
 ## Execute, in order
 
-### After first install...
+### After first install
 
 1. `arch-chroot` into the machine.
 2. `sudo pacman -Sy`
 3. `sudo pacman -S git`
-4. Clone this repo to the `/root` directory.
+4. Clone this repo to `/root`.
 5. Run Distribution-specific scripts (`Distribution`).
     * This will provide a baseline for the later scripts.
 6. `System/InstallSystem.sh`
@@ -23,25 +23,27 @@ These installation scripts setup a new Arch Linux install.
 9. Delete this repo from the `/root` directory.
 10. Reboot.
 
-### As User...
+### Setup system as User
 
-1. Install core system utilities.
-    1. Connect to wifi: `nmtui`.
-    2. Change keyboard layout.
-        * Change Keymap (`sudo localectl set-keymap dvorak`).
-    3. Clone this repo to the current user's home directory.
-    4. Install AUR Common Packages (`System/InstallSystemAur.sh`).
-    5. Install needed Pacman Hooks (`Pacman/Hook`).
-2. Reboot.
-3. Modify Bootloader.
+1. Connect to wifi: `nmtui`.
+2. Change keyboard layout.
+    * `sudo localectl set-keymap dvorak`
+3. Clone this repo to `~/Repos`.
+4. `System/InstallSystemAur.sh`
+5. Install needed Pacman Hooks (`Pacman/Hook`).
+6. `User/SetupUser.sh`
+7. Reboot.
+
+### Modify Boot
+
+1. Modify Bootloader.
     1. Add boot parameters.
         * [Silent boot](https://wiki.archlinux.org/index.php/silent_boot#Kernel_parameters)
         * [Nvidia DRM](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
     2. Change timeout to zero.
     3. Rebuild bootloader.
         1. Grub: https://wiki.archlinux.org/index.php/GRUB#Generated_grub.cfg
-4. Reboot.
-5. `sudo nano /etc/mkinitcpio.conf`
+2. `sudo nano /etc/mkinitcpio.conf`
     1. Replace "udev usr resume" with "systemd" in the HOOKS field. (Sources below):
         * https://wiki.archlinux.org/index.php/mkinitcpio#Common_hooks
         * https://bbs.archlinux.org/viewtopic.php?id=169988
@@ -51,24 +53,28 @@ These installation scripts setup a new Arch Linux install.
     3. Save.
     4. `sudo mkinitcpio -P`
 6. Reboot.
-7. Install common packages and utilities.
-    1. Setup Command-line Shell (`CommandLineShell`).
-    2. Install Desktop Environment (`DesktopEnvironment`).
-        * If using Wayland + Nvidia, [ensure xorg-xwayland is installed](https://wiki.archlinux.org/title/Wayland#XWayland).
-    3. Rank package mirrors.
-        1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`).
-        2. Rank Mirrors (`Pacman/MirrorRanking/RankMirrors.sh`).
-    4. Setup the User (`User/SetupUser.sh`).
-8. Update system.
+
+### Install Desktop Environment
+
+1. Rank package mirrors.
+    1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`).
+    2. `Pacman/MirrorRanking/RankMirrors.sh`
+2. Setup Command-line Shell (`CommandLineShell`).
+3. Install Desktop Environment (`DesktopEnvironment`).
+    * If using Wayland + Nvidia, [ensure xorg-xwayland is installed](https://wiki.archlinux.org/title/Wayland#XWayland).
+4. Update system.
     1. `yay -Syu`
     2. `sudo etc-update`
     3. Resolve conflicts.
-9. Reboot.
-10. Configure.
+5. Reboot.
+
+### Configure System and Install Applications
+
+1. Configure.
     * `nvidia-xconfig` (for Nvidia graphics cards)
-11. Install Applications.
+2. Install Applications.
     * (`Application`)
     * Any others.
-12. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
-13. Remove uninstalled package cache (Run `sudo pacman -Sc`).
-14. Reboot.
+3. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
+4. Remove uninstalled package cache (Run `sudo pacman -Sc`).
+5. Reboot.
