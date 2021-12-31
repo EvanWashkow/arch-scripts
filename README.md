@@ -23,7 +23,7 @@ These installation scripts setup a new Arch Linux install.
 9. Delete this repo from the `/root` directory.
 10. Reboot.
 
-### Setup system as User
+### Setup system as User (not root)
 
 1. Connect to wifi: `nmtui`.
 2. Change keyboard layout.
@@ -68,7 +68,7 @@ These installation scripts setup a new Arch Linux install.
     3. Resolve conflicts.
 3. Reboot.
 
-### Configure System and Install Applications
+### Configure DE and Install Applications
 
 1. Configure.
     * `nvidia-xconfig` (for Nvidia graphics cards)
