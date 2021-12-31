@@ -31,8 +31,11 @@ These installation scripts setup a new Arch Linux install.
 3. Clone this repo to `~/Repos`.
 4. `System/InstallSystemAur.sh`
 5. Install needed Pacman Hooks (`Pacman/Hook`).
-6. `User/SetupUser.sh`
-7. Reboot.
+6. Rank package mirrors.
+    1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`).
+    2. `Pacman/MirrorRanking/RankMirrors.sh`
+7. `User/SetupUser.sh`
+8. Reboot.
 
 ### Modify Boot
 
@@ -56,17 +59,14 @@ These installation scripts setup a new Arch Linux install.
 
 ### Install Desktop Environment
 
-1. Rank package mirrors.
-    1. Set up Pacman Mirror Ranking (`Pacman/MirrorRanking/Setup*.sh`).
-    2. `Pacman/MirrorRanking/RankMirrors.sh`
-2. Setup Command-line Shell (`CommandLineShell`).
-3. Install Desktop Environment (`DesktopEnvironment`).
+1. Setup Command-line Shell (`CommandLineShell`).
+2. Install Desktop Environment (`DesktopEnvironment`).
     * If using Wayland + Nvidia, [ensure xorg-xwayland is installed](https://wiki.archlinux.org/title/Wayland#XWayland).
-4. Update system.
+3. Update system.
     1. `yay -Syu`
     2. `sudo etc-update`
     3. Resolve conflicts.
-5. Reboot.
+4. Reboot.
 
 ### Configure System and Install Applications
 
