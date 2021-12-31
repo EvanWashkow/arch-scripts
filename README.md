@@ -62,11 +62,7 @@ These installation scripts setup a new Arch Linux install.
 
 1. Install Desktop Environment (`DesktopEnvironment`).
     * If using Wayland + Nvidia, [ensure xorg-xwayland is installed](https://wiki.archlinux.org/title/Wayland#XWayland).
-2. Update system.
-    1. `yay -Syu`
-    2. `sudo etc-update`
-    3. Resolve conflicts.
-3. Reboot.
+2. Reboot.
 
 ### Configure DE and Install Applications
 
