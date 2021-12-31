@@ -1,27 +1,27 @@
 # Arch Scripts
-Installation scripts for Arch Linux
 
-## General execution order
+These installation scripts setup a new Arch Linux install.
 
-### As Root...
+## Execute, in order
 
-1. After first install...
-    1. `arch-chroot` into the machine.
-    2. `sudo pacman -Sy`
-    3. `sudo pacman -S git`
-    4. Clone this repo to the `/root` directory.
-    5. Run Distribution-specific scripts (`Distribution`).
-        * This will provide a baseline for the later scripts.
-    6. Install System (`System/InstallSystem.sh`).
-    7. Install audio drivers. Choose one:
-        * `Audio/InstallPulseAudio.sh`
-        * `Audio/InstallPipewire.sh`
-    8. Install graphics drivers.
-        * `Graphics/InstallIntel.sh` - supports cards >= 2014.
-        * `Graphics/InstallNvidia.sh`
-        * `Graphics/InstallNvidiaPrime.sh` - adds the official `prime-run` command.
-    9. Delete this repo from the `/root` directory.
-2. Reboot.
+### After first install...
+
+1. `arch-chroot` into the machine.
+2. `sudo pacman -Sy`
+3. `sudo pacman -S git`
+4. Clone this repo to the `/root` directory.
+5. Run Distribution-specific scripts (`Distribution`).
+    * This will provide a baseline for the later scripts.
+6. `System/InstallSystem.sh`
+7. Install audio drivers. Choose one:
+    * `Audio/InstallPulseAudio.sh`
+    * `Audio/InstallPipewire.sh`
+8. Install graphics drivers.
+    * `Graphics/InstallIntel.sh` - supports cards >= 2014.
+    * `Graphics/InstallNvidia.sh`
+    * `Graphics/InstallNvidiaPrime.sh` - adds the official `prime-run` command.
+9. Delete this repo from the `/root` directory.
+10. Reboot.
 
 ### As User...
 
