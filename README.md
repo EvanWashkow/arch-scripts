@@ -62,9 +62,10 @@ Installation scripts for Arch Linux
 8. Update system.
     1. `yay -Syu`
     2. Run `sudo etc-update`, resolving conflicts.
-9. Install Applications.
+9. Reboot.
+10. Install Applications.
     1. (`Application`)
     2. Any others.
-10. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
-11. Remove uninstalled package cache (Run `sudo pacman -Sc`).
-12. Reboot.
+11. Remove orphaned packages (`Pacman/RemoveOrphanedPackages.sh`).
+12. Remove uninstalled package cache (Run `sudo pacman -Sc`).
+13. Reboot.
